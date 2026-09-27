@@ -1,0 +1,45 @@
+[project]
+name = "fiuto-design"
+version = "0.1.0"
+description = "Fiuto design tokens: generator of the CSS, TypeScript and Dart files"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "pytest-cov>=6",
+    "ruff>=0.6",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/fiuto_design"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["fiuto_design", "tests"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+# All code comes with its tests: `pytest --cov` needs 100% line and branch coverage.
+[tool.coverage.run]
+branch = true
+source = ["src/fiuto_design"]
+
+[tool.coverage.report]
+fail_under = 100
+show_missing = true
+skip_covered = true

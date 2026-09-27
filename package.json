@@ -1,0 +1,17 @@
+{
+  "name": "@scrapeanything/fiuto-design",
+  "version": "0.1.0",
+  "description": "Fiuto design tokens for the website: CSS variables, text style classes, typed values and logos.",
+  "private": true,
+  "license": "UNLICENSED",
+  "type": "module",
+  "exports": {
+    ".": "./web/tokens.ts",
+    "./tokens.css": "./web/tokens.css",
+    "./logos/*": "./assets/logos/*"
+  },
+  "files": [
+    "web",
+    "assets"
+  ]
+}

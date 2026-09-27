@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 68" width="320" height="136" role="img" aria-label="Fiuto">
+  <g fill="none" stroke="#eef1ed" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter">
+    <path d="M12 60V21a9 9 0 0 1 9-9h5"></path>
+    <path d="M4 28.5h20"></path>
+    <path d="M38 24v36"></path>
+    <path d="M54 24v19.5a12 12 0 0 0 24 0"></path>
+    <path d="M78 24v36"></path>
+    <path d="M97 12v34.5a9 9 0 0 0 9 9h5"></path>
+    <path d="M89 28.5h20"></path>
+    <rect x="122.5" y="28.5" width="26" height="27" rx="12.5"></rect>
+  </g>
+  <circle cx="38" cy="10.5" r="6" fill="#f2a516"></circle>
+</svg>
