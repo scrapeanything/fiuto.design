@@ -1,0 +1,81 @@
+name: CI
+
+on:
+  push:
+  workflow_dispatch:
+
+defaults:
+  run:
+    # "shell: bash" means -eo pipefail: a failing command inside "| tee" fails the step.
+    shell: bash
+
+jobs:
+  generator:
+    name: Generator and generated files
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: astral-sh/setup-uv@v7
+
+      - name: Dependencies
+        run: uv sync
+
+      - name: Ruff
+        run: |
+          uv run ruff check --output-format=github .
+          uv run ruff format --check .
+
+      - name: Tests
+        run: uv run pytest --cov 2>&1 | tee pytest.log
+
+      - name: Generated files up to date
+        run: uv run python -m fiuto_design --check
+
+      - name: Test summary
+        if: always()
+        run: |
+          [ -f pytest.log ] || exit 0
+          echo "::notice title=Tests::$(tail -1 pytest.log)"
+          echo "::notice title=Coverage::$(grep 'Required test coverage' pytest.log || true)"
+
+  typescript:
+    name: TypeScript
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: Type check
+        run: npx --yes -p typescript@5 tsc --noEmit --strict --target es2020 web/tokens.ts
+
+  flutter:
+    name: Flutter
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: flutter
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+
+      - name: Dependencies
+        run: flutter pub get
+
+      - name: Analyze
+        run: flutter analyze
+
+      - name: Tests
+        run: flutter test 2>&1 | tee flutter-test.log
+
+      - name: Test summary
+        if: always()
+        run: |
+          [ -f flutter-test.log ] || exit 0
+          echo "::notice title=Flutter tests::$(tail -1 flutter-test.log)"

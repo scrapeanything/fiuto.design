@@ -1,0 +1,137 @@
+/* Generated from tokens/tokens.json by `python -m fiuto_design`. Do not edit. */
+
+:root {
+  color-scheme: light;
+  --font-sans: "Barlow", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Barlow Semi Condensed", "Barlow", "Arial Narrow", sans-serif;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --color-surface: #f4f5f2;
+  --color-surface-raised: #ffffff;
+  --color-surface-sunken: #e9ebe6;
+  --color-line: #d7dbd4;
+  --color-line-strong: #7d8680;
+  --color-ink: #0f1311;
+  --color-ink-muted: #56605b;
+  --color-fiuto: #f2a516;
+  --color-fiuto-soft: #fcf0d6;
+  --color-fiuto-ink: #8a5300;
+  --color-on-fiuto: #1a1305;
+  --color-gain: #0b7a4b;
+  --color-gain-soft: #e0f3e9;
+  --color-loss: #c02637;
+  --color-loss-soft: #fbe4e6;
+  --color-focus: #0f1311;
+  --color-chart-series: #3f4b45;
+  --color-chart-muted: #7d8680;
+  --shadow-sheet: 0 -8px 24px rgba(15, 19, 17, 0.10);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --color-surface: #0d0f0e;
+    --color-surface-raised: #161a18;
+    --color-surface-sunken: #080a09;
+    --color-line: #262c29;
+    --color-line-strong: #606a65;
+    --color-ink: #eef1ed;
+    --color-ink-muted: #99a39e;
+    --color-fiuto: #f6b23a;
+    --color-fiuto-soft: #2c220e;
+    --color-fiuto-ink: #f6b23a;
+    --color-on-fiuto: #1a1305;
+    --color-gain: #45d08f;
+    --color-gain-soft: #0f281c;
+    --color-loss: #ff7d88;
+    --color-loss-soft: #311419;
+    --color-focus: #f6b23a;
+    --color-chart-series: #b5beb9;
+    --color-chart-muted: #667069;
+    --shadow-sheet: 0 -8px 24px rgba(0, 0, 0, 0.50);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-surface: #0d0f0e;
+  --color-surface-raised: #161a18;
+  --color-surface-sunken: #080a09;
+  --color-line: #262c29;
+  --color-line-strong: #606a65;
+  --color-ink: #eef1ed;
+  --color-ink-muted: #99a39e;
+  --color-fiuto: #f6b23a;
+  --color-fiuto-soft: #2c220e;
+  --color-fiuto-ink: #f6b23a;
+  --color-on-fiuto: #1a1305;
+  --color-gain: #45d08f;
+  --color-gain-soft: #0f281c;
+  --color-loss: #ff7d88;
+  --color-loss-soft: #311419;
+  --color-focus: #f6b23a;
+  --color-chart-series: #b5beb9;
+  --color-chart-muted: #667069;
+  --shadow-sheet: 0 -8px 24px rgba(0, 0, 0, 0.50);
+}
+
+.type-figure-xl {
+  font-family: var(--font-display);
+  font-size: 40px;
+  line-height: 44px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+}
+
+.type-figure {
+  font-family: var(--font-display);
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.type-title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  line-height: 30px;
+  font-weight: 600;
+}
+
+.type-heading {
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+.type-body {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.type-label {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.type-overline {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
