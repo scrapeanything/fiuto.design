@@ -40,7 +40,7 @@ class FiutoColors extends ThemeExtension<FiutoColors> {
   final Color ink;
   /// Secondary text: metadata, units, timestamps, labels. On surface, surface-raised, surface-sunken and fiuto-soft.
   final Color inkMuted;
-  /// The brand amber. Fills only: the primary button, the top-score badge, the dot of the logo, the active tab indicator. Text on it is on-fiuto.
+  /// The brand amber. Fills only: the primary button, the top-score badge, the numbered step tiles, the dot of the logo, the active tab indicator. Text on it is on-fiuto.
   final Color fiuto;
   /// Tinted background for highlighted deals and the brand callout; text on it is ink or fiuto-ink.
   final Color fiutoSoft;
