@@ -1,8 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="256" height="256" role="img" aria-label="Fiuto">
   <rect width="64" height="64" rx="14" fill="#232a27"></rect>
-  <g fill="none" stroke="#eef1ed" stroke-width="8" stroke-linecap="butt">
-    <path d="M23 52V27a10 10 0 0 1 10-10h3"></path>
-    <path d="M14 32h19"></path>
-  </g>
-  <circle cx="45" cy="17" r="5.5" fill="#f2a516"></circle>
+  <circle cx="32" cy="32" r="18.5" fill="none" stroke="#eef1ed" stroke-width="7"></circle>
+  <path d="M14 33H25M39 33H50M32 40V50" fill="none" stroke="#eef1ed" stroke-width="4" stroke-linecap="butt"></path>
+  <circle cx="32" cy="33" r="7" fill="#f2a516"></circle>
 </svg>
